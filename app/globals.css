@@ -1,26 +1,280 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =====================================================
+   KIA LAKESIDE — DESIGN SYSTEM
+   Primary:   #352679 (Deep Indigo)
+   Secondary: #FB8424 (Vibrant Orange)
+   ===================================================== */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand colors */
+  --color-primary: #352679;
+  --color-primary-dark: #261c5a;
+  --color-primary-light: #4a38a0;
+  --color-primary-muted: #352679cc;
+
+  --color-secondary: #FB8424;
+  --color-secondary-dark: #e06e10;
+  --color-secondary-light: #ffa050;
+
+  /* Neutrals */
+  --color-surface: #f8f7ff;
+  --color-surface-alt: #ffffff;
+  --color-border: #e2e0ee;
+  --color-text: #1a1633;
+  --color-text-muted: #64607a;
+
+  /* Fonts */
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =====================================================
+   BASE RESET & TYPOGRAPHY
+   ===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   CUSTOM ANIMATIONS
+   ===================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-18px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* Section spacing */
+.section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Container */
+.container-site {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-site {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ffd199 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-brand {
+  background: linear-gradient(135deg, #352679 0%, #FB8424 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Orange accent underline for headings */
+.heading-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.heading-underline-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(53, 38, 121, 0.15);
+}
+
+/* Mega-menu dropdown */
+.mega-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.nav-item:hover .mega-menu,
+.nav-item:focus-within .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Overlay backdrop */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(85vw, 360px);
+  height: 100dvh;
+  background: #ffffff;
+  z-index: 50;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+/* Stats counter number */
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1;
 }
