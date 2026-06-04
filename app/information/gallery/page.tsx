@@ -8,56 +8,56 @@ const categories = ["all", "campus", "academics", "sports", "arts"];
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop",
-    alt: "KIA Lakeside Academy main lawn",
+    src: "/school-images/school-building.jpg",
+    alt: "KIA Lakeside Academy main building and campus lawn",
     category: "campus",
     span: "md:col-span-2",
   },
   {
-    src: "/science_lab_students.png",
-    alt: "Secondary students investigating chemistry experiments",
+    src: "/school-images/science-lab.jpg",
+    alt: "Secondary students conducting experiments in the Science Lab",
     category: "academics",
     span: "md:col-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
-    alt: "Collaborative classroom work",
+    src: "/school-images/children-in-class.jpg",
+    alt: "Primary students participating in classroom activities",
     category: "academics",
     span: "md:col-span-1",
   },
   {
-    src: "/early_years_child.png",
-    alt: "Early years child participating in learning activities",
+    src: "/school-images/play-areas.jpg",
+    alt: "Early years children enjoying the secured playground",
     category: "campus",
     span: "md:col-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=800&auto=format&fit=crop",
-    alt: "Athletes practicing sprints on track",
+    src: "/school-images/sporting-facilities.jpg",
+    alt: "Excellent sports field and athletic track facilities",
     category: "sports",
     span: "md:col-span-2",
   },
   {
-    src: "/primary_school_girl.png",
-    alt: "Elementary student studying mathematics",
+    src: "/school-images/computer-room.jpg",
+    alt: "Students learning programming and ICT in the computer room",
     category: "academics",
     span: "md:col-span-1",
   },
   {
-    src: "/secondary_school_boy.png",
-    alt: "Secondary student working in Python coding lab",
-    category: "academics",
+    src: "/school-images/music-art.jpg",
+    alt: "Art studio projects and creative painting classes",
+    category: "arts",
     span: "md:col-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=800&auto=format&fit=crop",
-    alt: "Visual arts studio painting projects",
+    src: "/school-images/well-equipped-auditorium.jpg",
+    alt: "Modern auditorium for school assemblies, drama, and events",
     category: "arts",
     span: "md:col-span-2",
   },
   {
-    src: "/students_hallway.png",
-    alt: "Students interacting in school hallway corridors",
+    src: "/school-images/awards-with-kids.jpg",
+    alt: "Celebrating academic success and school achievements",
     category: "campus",
     span: "md:col-span-1",
   },
@@ -78,8 +78,8 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Gallery backdrop */}
         <Image
-          src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1600&auto=format&fit=crop"
-          alt="KIA Lakeside Academy school gallery backdrop"
+          src="/school-images/learning-environment.jpg"
+          alt="KIA Lakeside Academy learning environment gallery backdrop"
           fill
           priority
           className="object-cover"

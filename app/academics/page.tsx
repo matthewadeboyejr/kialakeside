@@ -80,7 +80,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Academic library / study setting */}
         <Image
-          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop"
+          src="/school-images/libraries.jpg"
           alt="KIA Lakeside Academy study resources"
           fill
           priority

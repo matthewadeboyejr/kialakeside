@@ -620,7 +620,7 @@ export default function HomePage() {
             {/* Card 2: Athletics & Sports (col-span-1, row-span-2) */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg group col-span-1 row-span-1 sm:row-span-2 h-64 sm:h-auto">
               <Image
-                src="https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=600&auto=format&fit=crop"
+                src="/school-images/sporting-facilities.jpg"
                 alt="Athletics & Sports"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -647,7 +647,7 @@ export default function HomePage() {
             {/* Card 3: Arts & Creativity (col-span-1, row-span-1) */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg group col-span-1 row-span-1 h-64 sm:h-auto">
               <Image
-                src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=600&auto=format&fit=crop"
+                src="/school-images/music-art.jpg"
                 alt="Arts & Creativity"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -701,7 +701,7 @@ export default function HomePage() {
             {/* Card 5: Graduation (col-span-1, row-span-1) */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg group col-span-1 row-span-1 h-64 sm:h-auto">
               <Image
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop"
+                src="/school-images/awards-with-kids.jpg"
                 alt="Graduation Caps"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
