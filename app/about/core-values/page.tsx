@@ -75,7 +75,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Collaboration and learning */}
         <Image
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop"
+          src="/new-conducive-learning-environment.jpg"
           alt="KIA Lakeside Academy students collaborating"
           fill
           priority

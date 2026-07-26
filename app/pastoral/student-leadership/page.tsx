@@ -1,310 +1,218 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SectionHeading from "../../_components/ui/SectionHeading";
+import Button from "../../_components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Student Leadership | KIA Lakeside Academy",
   description:
-    "Discover the student leadership framework at KIA Lakeside Academy, including Prefect Councils, the SRC, Class Captain roles, and leadership retreats.",
+    "Explore Student Leadership at KIA Lakeside Academy: Prefects, House Captains, Class Representatives, Student Council, Peer Mentoring, Community Service, and Leadership Conferences.",
 };
 
-const leadershipRoles = [
+const leadershipTopics = [
   {
-    title: "Head Boy & Head Girl",
-    description: "The senior representatives of the student body. They coordinate the Prefect Council, represent the school at public assemblies, and liaise with the academic management team.",
+    title: "Prefects",
+    description: "Senior student leaders selected to embody school values, assist staff, oversee assemblies, and maintain peer discipline.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" />
       </svg>
     ),
   },
   {
-    title: "Section Prefects",
-    description: "Specialized roles including Sports, Library, ICT, Environment, Assembly, and Academic Prefects. They coordinate specific activities and help tutors maintain daily schedules.",
+    title: "House Captains",
+    description: "Student champions leading Red, Blue, Green, and Yellow Houses in sports, academic rallies, and inter-house cups.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
       </svg>
     ),
   },
   {
-    title: "Student Representative Council (SRC)",
-    description: "An elected student assembly featuring classroom representatives who gather bi-weekly to discuss school enhancements, student events, and project proposals.",
+    title: "Class Representatives",
+    description: "Elected classroom delegates communicating student suggestions, organizing study groups, and coordinating class activities.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Student Council",
+    description: "Governing student assembly representing the student body in consultative meetings with school administration.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
   },
   {
-    title: "Class Captains & Monitors",
-    description: "Monthly elected representatives responsible for classroom order, resource distribution, and organizing study groups during teacher rotations.",
+    title: "Peer Mentoring",
+    description: "Experienced student mentors guiding younger peers through academic transition, study skills, and school adjustment.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    title: "Community Service",
+    description: "Student-led social impact projects, charity drives, environmental initiatives, and civic responsibility.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Leadership Conferences",
+    description: "Annual leadership retreats, workshops, public speaking forums, and external youth leadership summits.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
   },
 ];
 
-const currentLeaders = [
-  {
-    name: "Master Emmanuel Adebayo",
-    role: "Head Boy (Year 12)",
-    quote: "Leadership means leading by example and serving our school community with integrity.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    name: "Miss Chidiogo Nwachukwu",
-    role: "Head Girl (Year 12)",
-    quote: "Encouraging every student to discover their potential and achieve academic success.",
-    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    name: "Master Samuel Yusuf",
-    role: "Sports Prefect (Year 11)",
-    quote: "Promoting physical fitness, team spirit, and healthy competition across all houses.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    name: "Miss Amina Bello",
-    role: "Library Prefect (Year 11)",
-    quote: "Fostering a love for reading, research, and collaborative academic learning.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
-  },
-];
-
-export default function Page() {
+export default function StudentLeadershipPage() {
   return (
-    <>
-      {/* ═══════════════════════════════════════════
-          SECTION 1: HERO BANNER
-      ═══════════════════════════════════════════ */}
-      <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
-        {/* Background Image: Student leaders */}
-        <Image
-          src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1600&auto=format&fit=crop"
-          alt="KIA Lakeside Academy student leadership framework"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark indigo gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10" />
+    <main className="min-h-screen bg-white">
+      {/* ----------------------------------------------------
+          1. HERO HEADER BANNER
+         ---------------------------------------------------- */}
+      <section className="relative bg-[#352679] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB8424] rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#352679] rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3" />
+        </div>
 
-        <div className="container-site relative z-20 text-white w-full">
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 flex-wrap text-xs sm:text-sm">
-              <li>
-                <Link href="/" className="text-white/60 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/pastoral" className="text-white/60 hover:text-white transition-colors">
-                  Pastoral
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-                <span className="text-[#FB8424] font-semibold">Student Leadership</span>
-              </li>
-            </ol>
+        <div className="container-site relative z-10">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-amber-200/80 mb-6 font-medium">
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/pastoral" className="hover:text-white transition-colors">
+              Pastoral Care
+            </Link>
+            <span>/</span>
+            <span className="text-white">Student Leadership</span>
           </nav>
 
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-            Service & Representation
-          </span>
-          <h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-white"
-            style={{ fontFamily: "var(--font-outfit)" }}
-          >
-            Student Leadership
-          </h1>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          SECTION 2: LEADERSHIP ROLES
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-white" aria-label="Leadership roles">
-        <div className="container-site">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-              Opportunities for Service
-            </span>
-            <h2 className="text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              Structured Student Roles
-            </h2>
-            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
-              We provide practical leadership channels for students of all age groups, building communication, coordination, and team-building traits.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {leadershipRoles.map((role) => (
-              <div 
-                key={role.title}
-                className="bg-[#fcfbfe] border border-primary/5 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  {/* Icon Indicator */}
-                  <div className="w-10 h-10 rounded-xl bg-primary/5 border border-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-secondary/10 group-hover:border-secondary/20 group-hover:text-secondary transition-all duration-300">
-                    {role.icon}
-                  </div>
-
-                  <h3 className="text-lg font-bold text-primary mb-3" style={{ fontFamily: "var(--font-outfit)" }}>
-                    {role.title}
-                  </h3>
-                  
-                  <p className="text-xs sm:text-sm text-primary/70 leading-relaxed">
-                    {role.description}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-gray-100/50 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">
-                  Leadership Role
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs md:text-sm text-amber-300 font-semibold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#FB8424] animate-ping" />
+                Empowering Youth Leaders
               </div>
-            ))}
-          </div>
 
-        </div>
-      </section>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
+                Student Leadership
+              </h1>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 2.5: CURRENT STUDENT LEADERS
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-[#f9f9fb] border-t border-primary/5" aria-label="Current student leaders">
-        <div className="container-site">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-              Student Voice
-            </span>
-            <h2 className="text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              Meet Our Student Prefects
-            </h2>
-            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
-              Current student leaders (2025/2026 Academic Session) elected to serve, represent, and guide the student body.
-            </p>
-          </div>
+              <p className="text-lg md:text-xl text-purple-100/90 leading-relaxed max-w-2xl font-light">
+                At KIA Lakeside Academy, student leadership builds confidence, ethical responsibility, teamwork, and service to others.
+              </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {currentLeaders.map((leader) => (
-              <div 
-                key={leader.name}
-                className="bg-white border border-primary/10 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group"
-              >
-                {/* Photo container */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-primary/5">
+              <div className="pt-2 flex flex-wrap gap-4">
+                <Button href="/admissions/apply" variant="secondary" size="lg">
+                  Apply to KIA Lakeside
+                </Button>
+                <Button href="/pastoral/student-life" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                  Explore Student Life
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src={leader.image}
-                    alt={leader.name}
+                    src="/school-images/conducive-learning-environment.jpg"
+                    alt="KIA Lakeside Academy Student Leaders"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-w-768px) 100vw, 25vw"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    priority
                   />
-                  {/* Subtle gradient overlay at bottom of image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#352679]/80 via-transparent to-transparent" />
                 </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white">
+                  <p className="text-sm font-medium text-amber-300 uppercase tracking-widest mb-1">
+                    Service & Responsibility
+                  </p>
+                  <p className="text-xl font-bold font-display">
+                    Developing Tomorrow&apos;s Leaders
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                {/* Details */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-base sm:text-lg font-bold text-primary mb-1" style={{ fontFamily: "var(--font-outfit)" }}>
-                      {leader.name}
-                    </h3>
-                    <span className="text-xs font-semibold text-secondary uppercase tracking-wider block mb-4">
-                      {leader.role}
-                    </span>
-                    <p className="text-xs sm:text-sm text-primary/70 italic leading-relaxed">
-                      &ldquo;{leader.quote}&rdquo;
-                    </p>
+      {/* ----------------------------------------------------
+          2. LEADERSHIP DISCUSSION TOPICS (VERBATIM 7 ITEMS)
+         ---------------------------------------------------- */}
+      <section className="section-pad bg-white">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Leadership Framework"
+            title="Student Leadership Initiatives"
+            subtitle="Explore our key student leadership pillars and developmental channels:"
+            center
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {leadershipTopics.map((topic, idx) => (
+              <div
+                key={idx}
+                className="p-8 rounded-3xl bg-[#f8f7ff] border border-[#e2e0ee] hover:border-[#352679]/40 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#352679] text-white flex items-center justify-center group-hover:bg-[#FB8424] transition-colors duration-300 shadow-md">
+                    {topic.icon}
                   </div>
-                  
-                  <div className="mt-6 pt-4 border-t border-gray-100/50 text-[9px] text-gray-400 uppercase tracking-widest font-semibold">
-                    Prefect Council
-                  </div>
+
+                  <h3 className="text-xl font-bold text-[#1a1633] font-display">
+                    {topic.title}
+                  </h3>
+
+                  <p className="text-[#64607a] text-sm leading-relaxed">
+                    {topic.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 3: TRAINING RETREATS (2-COLUMN)
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-white border-t border-primary/5" aria-label="Leadership training programs">
-        <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            
-            {/* Column 1: Annual Retreat */}
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-                Annual Leadership Retreats
-              </h2>
-              <p className="text-sm sm:text-base text-primary/75 leading-relaxed">
-                Appointing leaders is only the first step. Every September, we host dedicated training retreats to equip newly elected prefects:
-              </p>
-              
-              <div className="space-y-4">
-                <div className="bg-white border border-primary/10 rounded-2xl p-6 shadow-sm">
-                  <h4 className="text-base font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                    🎓 Conflict Resolution Seminars
-                  </h4>
-                  <p className="text-sm text-primary/70 leading-relaxed">
-                    Prefects learn active listening, empathy, and mediation techniques to resolve simple disagreements between peers on the playground or classrooms.
-                  </p>
-                </div>
-                <div className="bg-white border border-primary/10 rounded-2xl p-6 shadow-sm">
-                  <h4 className="text-base font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                    ⏱️ Time Management Workshops
-                  </h4>
-                  <p className="text-sm text-primary/70 leading-relaxed">
-                    Balancing academic coursework, exams, and leadership responsibilities requires planning. We coach leaders on structuring diaries and prioritization.
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* ----------------------------------------------------
+          3. CLOSING CALL-TO-ACTION BANNER
+         ---------------------------------------------------- */}
+      <section className="relative section-pad bg-gradient-to-br from-[#352679] via-[#261c5a] to-[#1a1633] text-white text-center overflow-hidden">
+        <div className="container-site relative z-10 max-w-4xl space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
+            Inspiring Leadership
+          </div>
 
-            {/* Column 2: Outdoor Challenge */}
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-                Team Building Challenges
-              </h2>
-              <p className="text-sm sm:text-base text-primary/75 leading-relaxed">
-                Practical team challenges test collaboration, communication clarity, and trust:
-              </p>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-display leading-tight text-white">
+            Cultivating responsible, ethical, and service-driven student leaders at KIA Lakeside Academy.
+          </h2>
 
-              <div className="bg-white border border-primary/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
-                <ul className="space-y-4 text-sm text-primary/75">
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold font-mono">•</span>
-                    <span><strong>Outdoor Obstacle Courses:</strong> Managed physical events built to encourage team delegation, trust building, and collective problem-solving.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold font-mono">•</span>
-                    <span><strong>Interactive Case Studies:</strong> Group analysis panels reviewing historical examples of integrity-driven leadership.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold font-mono">•</span>
-                    <span><strong>Public Presentation Projects:</strong> Speech coaching sessions where leaders practice presenting term goals to administrative panels.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+            <Button href="/admissions/apply" variant="secondary" size="lg">
+              Apply to KIA Lakeside
+            </Button>
+            <Button href="/contact" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+              Contact Pastoral Team
+            </Button>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

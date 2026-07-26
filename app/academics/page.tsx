@@ -60,6 +60,26 @@ const academicSections = [
     ),
   },
   {
+    title: "Cambridge Pathway",
+    description: "Internationally benchmarked IGCSE curriculum fostering global university admission readiness.",
+    href: "/academics/cambridge-pathway",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2v1a2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V11.4" />
+      </svg>
+    ),
+  },
+  {
+    title: "AI & Digital Learning",
+    description: "Ethical artificial intelligence integration, coding, computational thinking, and digital citizenship.",
+    href: "/academics/digital-learning",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
     title: "Options Booklet",
     description: "Explore elective choices, senior academic streams (Sciences, Commercial, Arts), and career path planning tools.",
     href: "/academics/options-booklet",

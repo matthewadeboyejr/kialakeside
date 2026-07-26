@@ -70,7 +70,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: School office/lobby */}
         <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop"
+          src="/new-conducive-learning-environment.jpg"
           alt="KIA Lakeside Academy information desk office"
           fill
           priority

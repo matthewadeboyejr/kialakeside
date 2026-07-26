@@ -1,193 +1,238 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SectionHeading from "../../_components/ui/SectionHeading";
+import Button from "../../_components/ui/Button";
 
 export const metadata: Metadata = {
   title: "School Calendar | KIA Lakeside Academy",
   description:
-    "View the Month-by-month academic calendar, orientation dates, term resumptions, exam blocks, and speech days at KIA Lakeside Academy.",
+    "View and subscribe directly to the official KIA Lakeside Academy School Calendar via Google Calendar.",
 };
 
-const calendarMonths = [
+const subscribeOptions = [
   {
-    month: "September",
-    events: [
-      { title: "Orientation & Staff Planning", desc: "Staff training workshops begin early September." },
-      { title: "Student Resumption Date", desc: "First day of classes for Christmas Term." },
-    ],
+    name: "Google Calendar",
+    description: "Add to your personal Google account with real-time automatic synchronization.",
+    href: "https://calendar.google.com",
+    badge: "Direct Sync",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    ),
   },
   {
-    month: "October",
-    events: [
-      { title: "Mid-Term Break", desc: "A one-week break for students and staff mid-term." },
-      { title: "Parent-Teacher Forum", desc: "PTA assembly to discuss curriculum implementations." },
-    ],
+    name: "Apple iCal",
+    description: "Subscribe directly on iPhone, iPad, or Mac calendar applications.",
+    href: "https://calendar.google.com",
+    badge: "Apple Devices",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    ),
   },
   {
-    month: "December",
-    events: [
-      { title: "End of Term Exams", desc: "Christmas term examinations across all sections." },
-      { title: "Christmas Concert & Closing", desc: "Annual carols assembly followed by Christmas holiday closure." },
-    ],
-  },
-  {
-    month: "January",
-    events: [
-      { title: "Easter Term Resumption", desc: "Students return to classrooms for the second term." },
-    ],
-  },
-  {
-    month: "March",
-    events: [
-      { title: "Easter Term Closing", desc: "Examinations completed; closure for Easter holiday." },
-    ],
-  },
-  {
-    month: "April",
-    events: [
-      { title: "Summer Term Resumption", desc: "Third and final term of the academic session begins." },
-    ],
-  },
-  {
-    month: "July",
-    events: [
-      { title: "Speech & Prize Giving Day", desc: "Annual awards ceremony celebrating academic excellence." },
-      { title: "Graduation Ceremony", desc: "Year 6 and Year 12 graduation and closing of the session." },
-    ],
+    name: "Outlook Calendar",
+    description: "Integrate school term dates and events into your Microsoft Outlook account.",
+    href: "https://outlook.office.com/calendar",
+    badge: "Microsoft",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
   },
 ];
 
-export default function Page() {
+export default function SchoolCalendarPage() {
   return (
-    <>
-      {/* ═══════════════════════════════════════════
-          SECTION 1: HERO BANNER
-      ═══════════════════════════════════════════ */}
-      <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
-        {/* Background Image: Calendar planner */}
-        <Image
-          src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop"
-          alt="KIA Lakeside Academy calendar planner schedule"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark indigo gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10" />
+    <main className="min-h-screen bg-white">
+      {/* ----------------------------------------------------
+          1. HERO HEADER BANNER
+         ---------------------------------------------------- */}
+      <section className="relative bg-[#352679] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB8424] rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#352679] rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3" />
+        </div>
 
-        <div className="container-site relative z-20 text-white w-full">
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 flex-wrap text-xs sm:text-sm">
-              <li>
-                <Link href="/" className="text-white/60 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/information" className="text-white/60 hover:text-white transition-colors">
-                  Information
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-                <span className="text-[#FB8424] font-semibold">School Calendar</span>
-              </li>
-            </ol>
+        <div className="container-site relative z-10">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-amber-200/80 mb-6 font-medium">
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/information" className="hover:text-white transition-colors">
+              Information
+            </Link>
+            <span>/</span>
+            <span className="text-white">School Calendar</span>
           </nav>
 
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-            Academic Session
-          </span>
-          <h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-white"
-            style={{ fontFamily: "var(--font-outfit)" }}
-          >
-            School Calendar
-          </h1>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs md:text-sm text-amber-300 font-semibold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#FB8424] animate-ping" />
+                Live Academic Sync
+              </div>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 2: TIMELINE LIST
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-white" aria-label="Monthly calendar events">
-        <div className="container-site">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-              Year At A Glimpse
-            </span>
-            <h2 className="text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              Month-by-Month Highlights
-            </h2>
-            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
-              Plan ahead by checking the monthly milestones representing resumptions, exams, mid-term breaks, and graduation matches.
-            </p>
-          </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
+                School Calendar
+              </h1>
 
-          <div className="max-w-4xl mx-auto relative pl-8 before:absolute before:left-2 before:top-4 before:bottom-4 before:w-0.5 before:bg-primary/10 space-y-12">
-            {calendarMonths.map((m) => (
-              <div key={m.month} className="relative">
-                {/* Timeline node */}
-                <span className="absolute -left-10 top-1.5 w-4 h-4 rounded-full bg-secondary border-2 border-white flex items-center justify-center" />
+              <p className="text-lg md:text-xl text-purple-100/90 leading-relaxed max-w-2xl font-light">
+                Stay connected with KIA Lakeside Academy academic dates, examination timetables, sports meets, and term holidays. Parents can subscribe directly to sync updates to their mobile devices.
+              </p>
 
-                <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-                  {m.month}
-                </h3>
+              <div className="pt-2 flex flex-wrap gap-4">
+                <a
+                  href="#subscribe-section"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white rounded-full bg-[#FB8424] hover:bg-[#e06e10] transition-colors shadow-lg"
+                >
+                  Subscribe Directly
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </a>
+                <Button href="/academics/key-dates" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                  View Key Academic Dates
+                </Button>
+              </div>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {m.events.map((ev) => (
-                    <div key={ev.title} className="bg-[#fcfbfe] border border-primary/5 rounded-2xl p-6 shadow-sm">
-                      <h4 className="text-sm font-bold text-secondary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                        {ev.title}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-primary/70 leading-relaxed">
-                        {ev.desc}
-                      </p>
-                    </div>
-                  ))}
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/school-images/conducive-learning-environment.jpg"
+                    alt="KIA Lakeside Academy Calendar Events"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#352679]/80 via-transparent to-transparent" />
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white">
+                  <p className="text-sm font-medium text-amber-300 uppercase tracking-widest mb-1">
+                    Live Updates
+                  </p>
+                  <p className="text-xl font-bold font-display">
+                    Interactive Google Calendar
+                  </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------------------------------------------
+          2. EMBEDDED GOOGLE CALENDAR SECTION
+         ---------------------------------------------------- */}
+      <section className="section-pad bg-white">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Interactive Calendar"
+            title="Embedded Google Calendar"
+            subtitle="Explore scheduled school activities, holidays, exams, and special events below."
+            center
+          />
+
+          <div className="mt-12 bg-[#f8f7ff] border border-[#e2e0ee] rounded-3xl p-4 md:p-8 shadow-xl overflow-hidden">
+            <div className="relative w-full aspect-[16/10] min-h-[500px] rounded-2xl overflow-hidden border border-gray-200 bg-white">
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=en.ng%23holiday%40group.v.calendar.google.com&ctz=Africa%2FLagos"
+                style={{ border: 0 }}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+                title="KIA Lakeside Academy Google Calendar"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------------------------------------------
+          3. PARENTS CAN SUBSCRIBE DIRECTLY SECTION
+         ---------------------------------------------------- */}
+      <section id="subscribe-section" className="section-pad bg-[#f8f7ff]">
+        <div className="container-site max-w-5xl mx-auto">
+          <SectionHeading
+            eyebrow="Calendar Integration"
+            title="Parents Can Subscribe Directly"
+            subtitle="Never miss an important event. Add our official school calendar directly to your smartphone or desktop calendar app:"
+            center
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {subscribeOptions.map((option, idx) => (
+              <a
+                key={idx}
+                href={option.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-8 rounded-3xl bg-white border border-[#e2e0ee] hover:border-[#352679]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-[#352679] text-white flex items-center justify-center group-hover:bg-[#FB8424] transition-colors duration-300 shadow-md">
+                      {option.icon}
+                    </div>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FB8424]/10 text-[#FB8424] border border-[#FB8424]/20 uppercase tracking-wider font-display">
+                      {option.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-[#1a1633] font-display">
+                    {option.name}
+                  </h3>
+
+                  <p className="text-[#64607a] text-sm leading-relaxed">
+                    {option.description}
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100 mt-6 flex items-center gap-1.5 text-xs font-bold text-[#352679] group-hover:text-[#FB8424] transition-colors">
+                  Subscribe Now
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+              </a>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 3: PDF DOWNLOAD CTA
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-[#f9f9fb] border-t border-primary/5" aria-label="Printable calendar download">
-        <div className="container-site max-w-4xl mx-auto">
-          <div className="bg-white border border-primary/10 rounded-3xl p-8 sm:p-12 shadow-sm flex flex-col md:flex-row gap-8 items-center justify-between">
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                Need to print the calendar planner?
-              </h3>
-              <p className="text-sm text-primary/60 leading-relaxed">
-                Download the full, official 12-month printable calendar PDF detailing all academic events, holiday closures, and sports meets.
-              </p>
-            </div>
+      {/* ----------------------------------------------------
+          4. CLOSING CALL-TO-ACTION BANNER
+         ---------------------------------------------------- */}
+      <section className="relative section-pad bg-gradient-to-br from-[#352679] via-[#261c5a] to-[#1a1633] text-white text-center overflow-hidden">
+        <div className="container-site relative z-10 max-w-4xl space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
+            Transparent Academic Timelines
+          </div>
 
-            <div className="flex-shrink-0">
-              <Link
-                href="/admissions/process"
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold text-white rounded-xl hover:scale-105 active:scale-95 transition-all duration-200 shadow-md shadow-secondary/20"
-                style={{
-                  background: "linear-gradient(135deg, #FB8424 0%, #e06e10 100%)",
-                  fontFamily: "var(--font-outfit)",
-                }}
-              >
-                Download Calendar PDF 📥
-              </Link>
-            </div>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-display leading-tight text-white">
+            Keep track of term resumptions, exam dates, and family events effortlessly.
+          </h2>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+            <Button href="/admissions/apply" variant="secondary" size="lg">
+              Apply to KIA Lakeside
+            </Button>
+            <Button href="/contact" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+              Contact School Office
+            </Button>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

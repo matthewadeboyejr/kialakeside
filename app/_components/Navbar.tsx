@@ -23,6 +23,7 @@ const navItems = [
     href: "/admissions",
     children: [
       { label: "Why Choose KIA Lakeside", href: "/admissions/why-kia" },
+      { label: "Apply to KIA Lakeside", href: "/admissions/apply" },
       { label: "Admission Process", href: "/admissions/process" },
       { label: "Entrance Exam", href: "/admissions/entrance-exam" },
       { label: "Scholarship", href: "/admissions/scholarship" },
@@ -38,7 +39,9 @@ const navItems = [
       { label: "Early Years", href: "/academics/early-years" },
       { label: "Elementary Year", href: "/academics/elementary" },
       { label: "Secondary", href: "/academics/secondary" },
-      { label: "E-Learning", href: "https://elearning.kialakeside.edu", external: true },
+      { label: "Cambridge Pathway", href: "/academics/cambridge-pathway" },
+      { label: "AI & Digital Learning", href: "/academics/digital-learning" },
+      { label: "E-Learning", href: "/academics/e-learning" },
       { label: "Options Booklet", href: "/academics/options-booklet" },
     ],
   },
@@ -188,7 +191,7 @@ export default function Navbar() {
                                 className="w-1.5 h-1.5 rounded-full bg-[#FB8424] flex-shrink-0 transition-transform duration-150 group-hover/item:scale-125"
                               />
                               {child.label}
-                              {"external" in child && child.external && (
+                              {"external" in child && Boolean((child as { external?: boolean }).external) && (
                                 <svg className="w-3 h-3 ml-auto text-[#64607a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>

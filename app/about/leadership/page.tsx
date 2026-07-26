@@ -5,48 +5,64 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Leadership Team | KIA Lakeside Academy",
   description:
-    "Meet the experienced educational leaders, trustees, and management team driving academic and character excellence at KIA Lakeside Academy.",
+    "Meet the Board of Directors and School Management Team at KIA Lakeside Academy, guiding academic success and character development.",
 };
 
-const boardMembers = [
+interface LeaderProfile {
+  name: string;
+  role: string;
+  bio: string;
+  imageUrl?: string;
+  initials: string;
+  gradient: string;
+}
+
+const boardMembers: LeaderProfile[] = [
   {
     name: "Mrs. Tolulope Awobiyi",
     role: "Founder & Proprietress",
     bio: "Visionary founder overseeing the long-term legacy, core values, and strategic development of the academy.",
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+    initials: "TA",
+    gradient: "from-[#352679] to-[#FB8424]",
   },
   {
     name: "Mr. O. Awobiyi",
     role: "Executive Board Director",
     bio: "Guides institutional compliance, campus expansions, and curriculum alignments with global standards.",
-    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
+    initials: "OA",
+    gradient: "from-[#2e1f66] to-[#d66f1c]",
   },
 ];
 
-const managementTeam = [
+const managementTeam: LeaderProfile[] = [
   {
     name: "Mr. J. Smith",
     role: "Principal / Head of School",
     bio: "Directs day-to-day administration, academic standards, and the overall student development experience.",
-    imageUrl: "/principal_portrait.png",
+    imageUrl: "/new-principal-portrait.jpg",
+    initials: "JS",
+    gradient: "from-[#352679] to-[#25D366]",
   },
   {
     name: "Mrs. Chioma Anyanwu",
     role: "Academic Coordinator & Registrar",
     bio: "Manages admissions registration, curricular timetables, and academic compliance metrics.",
-    imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=300&auto=format&fit=crop",
+    initials: "CA",
+    gradient: "from-[#352679] to-[#a855f7]",
   },
   {
     name: "Mr. Benjamin Dafosi",
     role: "Bursar & Head of Finance",
     bio: "Oversees financial audits, operational budgets, and physical infrastructure expansions.",
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop",
+    initials: "BD",
+    gradient: "from-[#1e293b] to-[#475569]",
   },
   {
     name: "Mrs. Olamide Adedeji",
     role: "Head of Pastoral Care & HR",
     bio: "Directs student boarding houses, personal counseling, and human resource management.",
-    imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop",
+    initials: "OA",
+    gradient: "from-[#db2777] to-[#fb7185]",
   },
 ];
 
@@ -59,7 +75,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Classroom context */}
         <Image
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop"
+          src="/new-conducive-learning-environment.jpg"
           alt="Educational leadership and teaching"
           fill
           priority
@@ -127,13 +143,19 @@ export default function Page() {
                 className="bg-[#fcfbfe] border border-[#352679]/5 rounded-3xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start sm:items-center"
               >
                 <div className="relative w-28 h-28 rounded-2xl overflow-hidden flex-shrink-0 shadow-md">
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-top"
-                    sizes="120px"
-                  />
+                  {member.imageUrl ? (
+                    <Image
+                      src={member.imageUrl}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="120px"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white text-3xl font-extrabold font-display`}>
+                      {member.initials}
+                    </div>
+                  )}
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#352679]" style={{ fontFamily: "var(--font-outfit)" }}>
@@ -177,13 +199,19 @@ export default function Page() {
                 <div>
                   {/* Photo container */}
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-5 shadow-sm group">
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-w-7xl) 25vw, 50vw"
-                    />
+                    {member.imageUrl ? (
+                      <Image
+                        src={member.imageUrl}
+                        alt={member.name}
+                        fill
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-w-7xl) 25vw, 50vw"
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white text-4xl font-extrabold font-display`}>
+                        {member.initials}
+                      </div>
+                    )}
                   </div>
 
                   <h3 className="text-base sm:text-lg font-bold text-[#352679]" style={{ fontFamily: "var(--font-outfit)" }}>

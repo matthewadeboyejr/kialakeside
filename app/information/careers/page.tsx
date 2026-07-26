@@ -1,180 +1,210 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SectionHeading from "../../_components/ui/SectionHeading";
+import Button from "../../_components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Careers | KIA Lakeside Academy",
+  title: "Careers (Dynamic) | KIA Lakeside Academy",
   description:
-    "Join the teaching or administrative team at KIA Lakeside Academy. Explore current openings and application guidelines.",
+    "Explore career opportunities at KIA Lakeside Academy: Vacancies, Teacher Recruitment, Internships, Volunteer Opportunities, and Application Portal.",
 };
 
-const vacancies = [
+const careerCategories = [
   {
-    title: "Primary Class Teacher (Key Stage 2)",
-    requirements: [
-      "B.Ed or PGDE in Education (compulsory).",
-      "Minimum 3 years of classroom experience teaching primary children.",
-      "Strong familiarity with the British National Curriculum and active phonics.",
-      "Excellent auditory comprehension and verbal classroom coordination."
-    ],
-    type: "Full-Time",
+    title: "Vacancies",
+    description: "Explore current administrative, support, facility, and operational job openings across campus.",
+    badge: "Open Positions",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
   },
   {
-    title: "Secondary Chemistry Instructor",
-    requirements: [
-      "B.Sc in Chemistry with an Education certificate (B.Ed/PGDE).",
-      "Demonstrated success preparing students for WAEC (WASSCE) and Cambridge IGCSE boards.",
-      "Strong laboratory management skills and emergency first-aid protocols.",
-      "Familiarity with digital study tools and presentation software."
-    ],
-    type: "Full-Time",
+    title: "Teacher Recruitment",
+    description: "Join our teaching faculty for Early Years, Primary, and Secondary subject specializations.",
+    badge: "Academic Faculty",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253" />
+      </svg>
+    ),
   },
   {
-    title: "Registered School Nurse",
-    requirements: [
-      "Licensed Registered Nurse (RN) credentials with valid local board certification.",
-      "Prior experience in pediatrics, emergency care, or school health clinics.",
-      "Empathetic bedside manner and capacity to coordinate health records.",
-      "Competency managing student medical forms and dispensing basic drugs."
-    ],
-    type: "Full-Time",
+    title: "Internships",
+    description: "Graduate traineeships and student teacher internship placements for aspiring educators.",
+    badge: "Graduate Trainees",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Volunteer Opportunities",
+    description: "Community engagement, sports coaching assistance, event coordination, and reading mentorship.",
+    badge: "Community Outreach",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Application Portal",
+    description: "Submit online CVs, cover letters, and teaching credentials directly to HR recruitment desk.",
+    badge: "Online Submissions",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
   },
 ];
 
-export default function Page() {
+export default function CareersPage() {
   return (
-    <>
-      {/* ═══════════════════════════════════════════
-          SECTION 1: HERO BANNER
-      ═══════════════════════════════════════════ */}
-      <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
-        {/* Background Image: Teacher discussion */}
-        <Image
-          src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=1600&auto=format&fit=crop"
-          alt="KIA Lakeside Academy teacher career vacancies context"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark indigo gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10" />
+    <main className="min-h-screen bg-white">
+      {/* ----------------------------------------------------
+          1. HERO HEADER BANNER
+         ---------------------------------------------------- */}
+      <section className="relative bg-[#352679] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB8424] rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#352679] rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3" />
+        </div>
 
-        <div className="container-site relative z-20 text-white w-full">
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 flex-wrap text-xs sm:text-sm">
-              <li>
-                <Link href="/" className="text-white/60 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/information" className="text-white/60 hover:text-white transition-colors">
-                  Information
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-                <span className="text-[#FB8424] font-semibold">Careers</span>
-              </li>
-            </ol>
+        <div className="container-site relative z-10">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-amber-200/80 mb-6 font-medium">
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/information" className="hover:text-white transition-colors">
+              Information
+            </Link>
+            <span>/</span>
+            <span className="text-white">Career (Dynamic)</span>
           </nav>
 
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-            Job Openings
-          </span>
-          <h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-white"
-            style={{ fontFamily: "var(--font-outfit)" }}
-          >
-            Careers
-          </h1>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs md:text-sm text-amber-300 font-semibold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#FB8424] animate-ping" />
+                Dynamic Careers & Talent Recruitment
+              </div>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 2: VACANCIES LIST
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-white" aria-label="Vacancies listing">
-        <div className="container-site">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-              Join Our Team
-            </span>
-            <h2 className="text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              Current Open Positions
-            </h2>
-            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
-              We look for certified, passionate educators and administrative professionals to support our pupils' holistic development.
-            </p>
-          </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
+                Career (Dynamic)
+              </h1>
 
-          <div className="space-y-8 max-w-4xl mx-auto">
-            {vacancies.map((job) => (
-              <div 
-                key={job.title}
-                className="bg-[#fcfbfe] border border-primary/10 rounded-3xl p-6 sm:p-8 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg sm:text-xl font-bold text-primary" style={{ fontFamily: "var(--font-outfit)" }}>
-                      {job.title}
-                    </h3>
-                    <span 
-                      className="px-3.5 py-1 rounded-full text-xs font-bold text-white shadow-sm flex-shrink-0"
-                      style={{
-                        background: "linear-gradient(135deg, #FB8424 0%, #e06e10 100%)",
-                        fontFamily: "var(--font-outfit)",
-                      }}
-                    >
-                      {job.type}
-                    </span>
-                  </div>
+              <p className="text-lg md:text-xl text-purple-100/90 leading-relaxed max-w-2xl font-light">
+                Join our vibrant educational team. Explore job vacancies, teacher recruitment, internship opportunities, volunteer programs, and online application portal.
+              </p>
 
-                  <div className="space-y-2 mt-4">
-                    <h4 className="text-[10px] uppercase font-bold tracking-wider text-primary/45">Job Requirements</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((req, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-primary/75">
-                          <span className="text-secondary font-bold font-mono mt-0.5">•</span>
-                          <span>{req}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <div className="pt-2 flex flex-wrap gap-4">
+                <Button href="/contact" variant="secondary" size="lg">
+                  Submit CV & Application
+                </Button>
+                <Button href="/about/leadership" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                  Explore School Leadership
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/school-images/conducive-learning-environment.jpg"
+                    alt="KIA Lakeside Academy Faculty & Careers"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#352679]/80 via-transparent to-transparent" />
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white">
+                  <p className="text-sm font-medium text-amber-300 uppercase tracking-widest mb-1">
+                    Workplace Excellence
+                  </p>
+                  <p className="text-xl font-bold font-display">
+                    Empowering Educators & Staff
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          SECTION 3: HOW TO APPLY
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-[#f9f9fb] border-t border-primary/5" aria-label="Job application steps">
-        <div className="container-site max-w-4xl mx-auto">
-          <div className="bg-white border border-primary/10 rounded-3xl p-8 sm:p-12 shadow-sm">
-            <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              How to Apply
-            </h3>
-            <p className="text-sm text-primary/70 leading-relaxed mb-4">
-              Interested and qualified candidates should email their comprehensive CV and a brief Cover Letter detailing their teaching philosophy to <strong className="text-primary">academy.lakeside@yahoo.com</strong>.
-            </p>
-            <p className="text-sm text-primary/70 leading-relaxed mb-6">
-              Please state the specific position title in the subject line of your email (e.g. <em>Application for Secondary Chemistry Instructor - [Your Name]</em>). Only shortlisted candidates will be contacted for interviews and vetting clearance audits.
-            </p>
-            <div className="bg-[#fcfbfe] border border-primary/5 p-4 rounded-xl text-xs text-primary/60">
-              📢 <strong>Vetting Note:</strong> All final job offers at KIA Lakeside Academy are subject to strict academic credentials verification, background reviews, and reference checks.
             </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ----------------------------------------------------
+          2. DYNAMIC CAREER CATEGORIES GRID (VERBATIM 5 ITEMS)
+         ---------------------------------------------------- */}
+      <section className="section-pad bg-white">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Recruitment Channels"
+            title="Career & Talent Opportunities"
+            subtitle="Explore all five career streams available at KIA Lakeside Academy:"
+            center
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {careerCategories.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-8 rounded-3xl bg-[#f8f7ff] border border-[#e2e0ee] hover:border-[#352679]/40 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-[#352679] text-white flex items-center justify-center group-hover:bg-[#FB8424] transition-colors duration-300 shadow-md">
+                      {item.icon}
+                    </div>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FB8424]/10 text-[#FB8424] border border-[#FB8424]/20 uppercase tracking-wider font-display">
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-[#1a1633] font-display">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-[#64607a] text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------------------------------------------
+          3. CLOSING CALL-TO-ACTION BANNER
+         ---------------------------------------------------- */}
+      <section className="relative section-pad bg-gradient-to-br from-[#352679] via-[#261c5a] to-[#1a1633] text-white text-center overflow-hidden">
+        <div className="container-site relative z-10 max-w-4xl space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
+            Join Our Faculty & Staff
+          </div>
+
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-display leading-tight text-white">
+            Build a rewarding professional career shaping the leaders of tomorrow at KIA Lakeside Academy.
+          </h2>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+            <Button href="/contact" variant="secondary" size="lg">
+              Apply via Online Portal
+            </Button>
+            <Button href="/about" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+              Learn About Our School
+            </Button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

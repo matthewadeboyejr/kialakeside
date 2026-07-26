@@ -61,7 +61,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Classroom library / study books */}
         <Image
-          src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1600&auto=format&fit=crop"
+          src="/new-liberies.jpg"
           alt="Secondary school options booklet resources"
           fill
           priority

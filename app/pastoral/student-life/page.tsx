@@ -1,246 +1,220 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SectionHeading from "../../_components/ui/SectionHeading";
+import Button from "../../_components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Student Life | KIA Lakeside Academy",
   description:
-    "Explore the House System (Red, Blue, Green, Yellow), daily morning assemblies, and extramural clubs that structure student life at KIA Lakeside Academy.",
+    "Discover Student Life at KIA Lakeside Academy: leadership programmes, sports, performing arts, educational excursions, cultural celebrations, and active clubs.",
 };
 
-const houses = [
+const studentLifeActivities = [
   {
-    name: "Red House (Valor)",
-    value: "Valor & Courage",
-    description: "Symbolizes physical endurance, tenacity, and strength of character. Red House athletes and thinkers consistently strive to overcome challenges.",
-    colorTag: "border-red-200 bg-red-50 text-red-700",
+    title: "Leadership Programmes",
+    description: "Developing student council leaders, house captains, and prefects with responsibility and integrity.",
     icon: (
-      <svg className="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
   },
   {
-    name: "Blue House (Wisdom)",
-    value: "Wisdom & Integrity",
-    description: "Focuses on deep intellectual pursuits, integrity, and focused organization. Represents students who maintain excellent academic portfolios and term counts.",
-    colorTag: "border-blue-200 bg-blue-50 text-blue-700",
+    title: "Clubs & Extracurriculars",
+    description: "Debate, robotics, coding, chess, press club, and science innovation societies.",
     icon: (
-      <svg className="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.594 15.12a2 2 0 00-1.583.332A2 2 0 003 17.034V20a1 1 0 001 1h16a1 1 0 001-1v-2.966a2 2 0 00-.572-1.606z" />
       </svg>
     ),
   },
   {
-    name: "Green House (Growth)",
-    value: "Growth & Resilience",
-    description: "Champions environmental awareness, interpersonal collaboration, and steady growth. Encourages restorative actions and community coordination.",
-    colorTag: "border-green-200 bg-green-50 text-green-700",
+    title: "Sporting Activities",
+    description: "Football, basketball, swimming, athletics, tennis, and inter-house competitions.",
     icon: (
-      <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
       </svg>
     ),
   },
   {
-    name: "Yellow House (Brightness)",
-    value: "Optimism & Innovation",
-    description: "Inspires bright creative writing, music concerts, and technical innovations. Celebrates cheerful optimism, debate tracks, and peer encouragement.",
-    colorTag: "border-yellow-200 bg-yellow-50 text-yellow-700",
+    title: "Performing Arts",
+    description: "Music concerts, instrumental training, drama performances, dance, and creative art exhibitions.",
     icon: (
-      <svg className="w-8 h-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zm12 0c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zM9 10l12-3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Educational Excursions",
+    description: "Field trips to historical sites, science museums, technology hubs, and environmental reserves.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2v1a2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V11.4" />
+      </svg>
+    ),
+  },
+  {
+    title: "Cultural Celebrations & Community Service",
+    description: "Annual cultural heritage festivals, charity drives, environmental cleanups, and community outreach.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
   },
 ];
 
-export default function Page() {
+export default function StudentLifePage() {
   return (
-    <>
-      {/* ═══════════════════════════════════════════
-          SECTION 1: HERO BANNER
-      ═══════════════════════════════════════════ */}
-      <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
-        {/* Background Image: Active group */}
-        <Image
-          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
-          alt="KIA Lakeside Academy student life and activities"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark indigo gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10" />
+    <main className="min-h-screen bg-white">
+      {/* ----------------------------------------------------
+          1. HERO HEADER BANNER
+         ---------------------------------------------------- */}
+      <section className="relative bg-[#352679] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#FB8424] rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#352679] rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3" />
+        </div>
 
-        <div className="container-site relative z-20 text-white w-full">
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 flex-wrap text-xs sm:text-sm">
-              <li>
-                <Link href="/" className="text-white/60 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/pastoral" className="text-white/60 hover:text-white transition-colors">
-                  Pastoral
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-3 h-3 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-                <span className="text-[#FB8424] font-semibold">Student Life</span>
-              </li>
-            </ol>
+        <div className="container-site relative z-10">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-amber-200/80 mb-6 font-medium">
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/pastoral" className="hover:text-white transition-colors">
+              Pastoral Care
+            </Link>
+            <span>/</span>
+            <span className="text-white">Student Life</span>
           </nav>
 
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-            School Community
-          </span>
-          <h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-white"
-            style={{ fontFamily: "var(--font-outfit)" }}
-          >
-            Student Life
-          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs md:text-sm text-amber-300 font-semibold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#FB8424] animate-ping" />
+                Vibrant Campus Culture
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
+                Student Life
+              </h1>
+
+              <p className="text-lg md:text-xl text-purple-100/90 leading-relaxed max-w-2xl font-light">
+                Life at KIA Lakeside Academy extends far beyond the classroom. Every day provides opportunities for students to discover new interests, develop meaningful friendships, build confidence, and become active members of a caring school community.
+              </p>
+
+              <div className="pt-2 flex flex-wrap gap-4">
+                <Button href="/admissions/apply" variant="secondary" size="lg">
+                  Join Our Community
+                </Button>
+                <Button href="/enrichment/sports" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+                  Explore Sports & Clubs
+                </Button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/student-life-heroimg.jpg"
+                    alt="KIA Lakeside Academy Student Life Activities"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#352679]/80 via-transparent to-transparent" />
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-6 text-white">
+                  <p className="text-sm font-medium text-amber-300 uppercase tracking-widest mb-1">
+                    Caring Community
+                  </p>
+                  <p className="text-xl font-bold font-display">
+                    Meaningful Friendships & Growth
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 2: HOUSE SYSTEM
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-white" aria-label="The house system">
-        <div className="container-site">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
-              Identity & Camaraderie
-            </span>
-            <h2 className="text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-              The Four School Houses
-            </h2>
-            <p className="text-sm sm:text-base text-primary/70 leading-relaxed">
-              Every student is assigned to one of our four houses to encourage cross-grade camaraderie, group loyalty, and termly sports/academic competitions.
+      {/* ----------------------------------------------------
+          2. PARTICIPATION & ENRICHED JOURNEY
+         ---------------------------------------------------- */}
+      <section className="section-pad bg-white">
+        <div className="container-site max-w-4xl mx-auto space-y-8">
+          <div className="p-8 md:p-10 rounded-3xl bg-[#f8f7ff] border-l-4 border-[#352679] shadow-sm space-y-4">
+            <p className="text-lg md:text-xl text-[#352679] font-medium leading-relaxed">
+              Students participate in leadership programmes, clubs, sporting activities, performing arts, educational excursions, cultural celebrations, community service projects, and school events that enrich their educational journey.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {houses.map((house) => (
-              <div 
-                key={house.name}
-                className="bg-[#fcfbfe] border border-primary/5 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+      {/* ----------------------------------------------------
+          3. STUDENT LIFE OPPORTUNITIES GRID
+         ---------------------------------------------------- */}
+      <section className="section-pad bg-[#f8f7ff]">
+        <div className="container-site">
+          <SectionHeading
+            eyebrow="Beyond The Classroom"
+            title="Enriching Student Life Experiences"
+            subtitle="Diverse activities designed to nurture leadership, teamwork, and personal talents."
+            center
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {studentLifeActivities.map((activity, idx) => (
+              <div
+                key={idx}
+                className="p-8 rounded-3xl bg-white border border-[#e2e0ee] hover:border-[#352679]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
-                <div>
-                  <div className="flex justify-between items-start mb-8">
-                    {/* Icon Indicator */}
-                    <div className="w-14 h-14 rounded-2xl bg-white border border-primary/5 flex items-center justify-center shadow-sm">
-                      {house.icon}
-                    </div>
-
-                    {/* Value Badge */}
-                    <span className="text-[10px] font-bold text-primary/45 uppercase tracking-wider">
-                      House Core
-                    </span>
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#352679] text-white flex items-center justify-center group-hover:bg-[#FB8424] transition-colors duration-300 shadow-md">
+                    {activity.icon}
                   </div>
-
-                  <h3 className="text-lg font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                    {house.name}
+                  <h3 className="text-xl font-bold text-[#1a1633] font-display">
+                    {activity.title}
                   </h3>
-                  
-                  <span className="text-xs font-semibold text-secondary mb-4 block">
-                    {house.value}
-                  </span>
-
-                  <p className="text-xs sm:text-sm text-primary/70 leading-relaxed">
-                    {house.description}
+                  <p className="text-[#64607a] text-sm leading-relaxed">
+                    {activity.description}
                   </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-gray-100/50 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">
-                  KIA LAKESIDE HOUSE
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 3: DAILY ROUTINES & CLUBS (2-COLUMN)
-      ═══════════════════════════════════════════ */}
-      <section className="py-20 bg-[#f9f9fb] border-t border-primary/5" aria-label="Routines and clubs">
-        <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            
-            {/* Column 1: Daily Assemblies */}
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-                Morning Assemblies & Values
-              </h2>
-              <p className="text-sm sm:text-base text-primary/75 leading-relaxed">
-                Assemblies are held weekly to frame school culture. They focus on character traits, spiritual guidance, spelling bees, and national values:
-              </p>
-              
-              <div className="space-y-4">
-                <div className="bg-white border border-primary/10 rounded-2xl p-6 shadow-sm">
-                  <h4 className="text-base font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                    ⏰ Weekly Assembly Routine
-                  </h4>
-                  <p className="text-sm text-primary/70 leading-relaxed">
-                    Every Monday morning, students and faculty gather at the central assembly hall. Routine covers singing the National Anthem, reciting the School Pledge, and student-led presentations.
-                  </p>
-                </div>
-                <div className="bg-white border border-primary/10 rounded-2xl p-6 shadow-sm">
-                  <h4 className="text-base font-bold text-primary mb-2" style={{ fontFamily: "var(--font-outfit)" }}>
-                    🧠 Theme-based Character Guidance
-                  </h4>
-                  <p className="text-sm text-primary/70 leading-relaxed">
-                    Each week focuses on a specialized core value or character trait (such as honesty, environmental accountability, time management) supported by class dramas and stories.
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* ----------------------------------------------------
+          4. CLOSING RESPECTFUL ENVIRONMENT STATEMENT & CTA
+         ---------------------------------------------------- */}
+      <section className="relative section-pad bg-gradient-to-br from-[#352679] via-[#261c5a] to-[#1a1633] text-white text-center overflow-hidden">
+        <div className="container-site relative z-10 max-w-4xl space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
+            Inspiring School Environment
+          </div>
 
-            {/* Column 2: Club Landscapes */}
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
-                Active School Clubs
-              </h2>
-              <p className="text-sm sm:text-base text-primary/75 leading-relaxed">
-                Our enrichment framework supports development outside the core academic hours. Students can choose from a variety of active clubs:
-              </p>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-display leading-tight text-white">
+            &ldquo;We intentionally create an environment where every learner feels respected, valued, and inspired to contribute positively to school life.&rdquo;
+          </h2>
 
-              <div className="bg-white border border-primary/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
-                <ul className="space-y-3.5 text-sm text-primary/75">
-                  <li className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
-                    <span><strong>Debate & Public Speaking Track</strong>: Weekly panels to practice speech pacing, logical arguments, and spelling bee training.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
-                    <span><strong>Coding & IT Club</strong>: Animation projects in Scratch, basic scripting logic, and computer game design challenges.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
-                    <span><strong>Choir & Instrumental Lessons</strong>: Learning violin scale control, recorder breathing, and music notation reading.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+            <Button href="/admissions/apply" variant="secondary" size="lg">
+              Apply to KIA Lakeside
+            </Button>
+            <Button href="/pastoral/student-leadership" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
+              View Student Leadership
+            </Button>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

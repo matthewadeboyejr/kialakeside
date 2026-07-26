@@ -20,6 +20,16 @@ const admissionsSections = [
     ),
   },
   {
+    title: "Apply to KIA Lakeside",
+    description: "Begin your child's enrolment journey today with our online application guidelines and document checklists.",
+    href: "/admissions/apply",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+  },
+  {
     title: "Admission Process",
     description: "A step-by-step roadmap to guide you from your initial inquiry through registration to the final admission offer.",
     href: "/admissions/process",
@@ -70,7 +80,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Campus lawn */}
         <Image
-          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1600&auto=format&fit=crop"
+          src="/hero1.jpg"
           alt="KIA Lakeside Academy campus lawn"
           fill
           priority

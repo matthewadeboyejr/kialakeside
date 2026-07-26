@@ -87,7 +87,7 @@ export default function HomePage() {
         {/* Full-bleed Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero.png"
+            src="/hero.jpg"
             alt="KIA Lakeside Campus and Students"
             fill
             priority
@@ -217,7 +217,7 @@ export default function HomePage() {
                 {/* Principal image */}
                 <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5] w-full">
                   <Image
-                    src="/principal_portrait.png"
+                    src="/new-principal-portrait.jpg"
                     alt="School Principal"
                     fill
                     className="object-cover object-top transition-transform duration-500 hover:scale-105"
@@ -343,13 +343,13 @@ export default function HomePage() {
                 style={{ fontFamily: "var(--font-poppins), sans-serif" }}
               >
                 <p className="text-xl sm:text-2xl font-normal leading-relaxed text-white">
-                  Welcome to <span className="font-bold text-[#FB8424]">KIA Lakeside</span>, a premier school committed to nurturing academic excellence, integrity, and achievement. We provide a world-class educational pathway from Early Years through to Secondary.
+                  Choosing the right school is one of the most important decisions a family can make. At <span className="font-bold text-[#FB8424]">KIA Lakeside Academy</span>, we believe that every child deserves an education that nurtures academic excellence, strong character, creativity, and confidence. Our commitment is to help every learner discover their potential and develop the knowledge, skills, and values needed to thrive in an ever-changing world.
                 </p>
                 <p className="leading-relaxed">
-                  Discover our modern lakeside campus, designed to inspire curiosity and foster innovation, where experienced educators guide students to unlock their unique potentials.
+                  KIA Lakeside Academy is a vibrant co-educational school dedicated to providing a safe, caring, and inspiring learning environment where every child is known, valued, and challenged to succeed. We combine a rich academic curriculum with innovative teaching, technology-driven learning, and character education to prepare students for success both locally and globally.
                 </p>
                 <p className="leading-relaxed">
-                  We offer both outstanding day and comprehensive boarding programmes, providing a supportive, home-away-from-home environment that builds character and lifelong friendships.
+                  Our educational philosophy goes beyond excellent examination results. We intentionally develop the whole child—intellectually, socially, emotionally, physically, and morally. We believe that true education empowers children to think critically, communicate effectively, collaborate confidently, and lead with integrity.
                 </p>
                 <p className="text-lg sm:text-xl font-normal mt-4 leading-relaxed">
                   Admissions are now open —{" "}
@@ -408,7 +408,7 @@ export default function HomePage() {
               {/* Image */}
               <div className="relative aspect-[3/2] w-full overflow-hidden">
                 <Image
-                  src="/early_years_child.png"
+                  src="/new-early-child.jpeg"
                   alt="Early Years Child"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -456,7 +456,7 @@ export default function HomePage() {
               {/* Image */}
               <div className="relative aspect-[3/2] w-full overflow-hidden">
                 <Image
-                  src="/primary_school_girl.png"
+                  src="/new-primary-school-girl.jpeg"
                   alt="Primary School Girl"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -497,7 +497,7 @@ export default function HomePage() {
               {/* Image */}
               <div className="relative aspect-[3/2] w-full overflow-hidden">
                 <Image
-                  src="/secondary_school_boy.png"
+                  src="/new-secondary-school-boy.jpg"
                   alt="Secondary School Boy"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"

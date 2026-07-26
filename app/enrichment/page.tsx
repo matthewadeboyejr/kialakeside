@@ -50,7 +50,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Sports/Children playing */}
         <Image
-          src="https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=1600&auto=format&fit=crop"
+          src="/new-sporting-facilities.jpg"
           alt="KIA Lakeside Academy student sports running fields"
           fill
           priority

@@ -34,7 +34,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Finance planning / Campus context */}
         <Image
-          src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop"
+          src="/new-conference-room.jpg"
           alt="Tuition and school fee financial details"
           fill
           priority

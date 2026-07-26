@@ -17,7 +17,7 @@ export default function Page() {
       <section className="relative w-full h-[45vh] min-h-[350px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Energetic active sports theme matching the 1st image */}
         <Image
-          src="https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=1600&auto=format&fit=crop"
+          src="/new-sporting-facilities.jpg"
           alt="Students running on sports track"
           fill
           priority
@@ -318,7 +318,7 @@ export default function Page() {
             <div className="lg:col-span-7">
               <div className="relative rounded-2xl overflow-hidden aspect-[16/10] shadow-lg border border-gray-100 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop"
+                  src="/hero1.jpg"
                   alt="KIA Lakeside Academy Campus buildings and lawns"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-103"
@@ -342,7 +342,7 @@ export default function Page() {
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-gray-100 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop"
+                  src="/new-well-equipped-auditorium.jpg"
                   alt="Graduating students celebrating academic success"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-103"

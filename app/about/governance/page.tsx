@@ -80,7 +80,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Wide view campus photo */}
         <Image
-          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1600&auto=format&fit=crop"
+          src="/new-conference-room.jpg"
           alt="KIA Lakeside Academy Governance and Campus"
           fill
           priority
