@@ -19,14 +19,14 @@ interface LeaderProfile {
 
 const boardMembers: LeaderProfile[] = [
   {
-    name: "Mrs. Tolulope Awobiyi",
+    name: "Mrs. Titilayo Adebiyi",
     role: "Founder & Proprietress",
     bio: "Visionary founder overseeing the long-term legacy, core values, and strategic development of the academy.",
     initials: "TA",
     gradient: "from-[#352679] to-[#FB8424]",
   },
   {
-    name: "Mr. O. Awobiyi",
+    name: "Professor Benjamin Adebiyi",
     role: "Executive Board Director",
     bio: "Guides institutional compliance, campus expansions, and curriculum alignments with global standards.",
     initials: "OA",
@@ -126,7 +126,7 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Board of directors">
         <div className="container-site">
-          
+
           <div className="max-w-2xl mb-12">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Governance
@@ -138,7 +138,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
             {boardMembers.map((member) => (
-              <div 
+              <div
                 key={member.name}
                 className="bg-[#fcfbfe] border border-[#352679]/5 rounded-3xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start sm:items-center"
               >
@@ -180,7 +180,7 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-[#f9f9fb] border-t border-[#352679]/5" aria-label="School management team">
         <div className="container-site">
-          
+
           <div className="max-w-2xl mb-12">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Administration
@@ -192,7 +192,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {managementTeam.map((member) => (
-              <div 
+              <div
                 key={member.name}
                 className="bg-white border border-[#352679]/5 rounded-3xl p-5 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
               >
@@ -220,7 +220,7 @@ export default function Page() {
                   <p className="text-xs text-[#FB8424] font-semibold tracking-wide uppercase mt-0.5 mb-4">
                     {member.role}
                   </p>
-                  
+
                   <p className="text-xs sm:text-sm text-[#64607a] leading-relaxed">
                     {member.bio}
                   </p>
@@ -228,8 +228,8 @@ export default function Page() {
 
                 <div className="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-xs">
                   <span className="text-[#64607a]">KIA Lakeside Academy</span>
-                  <a 
-                    href="mailto:academy.lakeside@yahoo.com" 
+                  <a
+                    href="mailto:academy.lakeside@yahoo.com"
                     className="text-[#FB8424] hover:text-[#e06e10] font-semibold"
                   >
                     Contact &rarr;

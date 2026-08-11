@@ -12,7 +12,7 @@ const boardMembers = [
   {
     role: "Board Chairperson",
     title: "Chair of the Board",
-    responsibility: "Proprietress Mrs. Tolulope Awobiyi. Leads board councils, manages strategic school planning, and oversees executive governance.",
+    responsibility: "Proprietress Mrs. Titilayo Adebiyi. Leads board councils, manages strategic school planning, and oversees executive governance.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -132,7 +132,7 @@ export default function Page() {
       <section className="py-20 bg-white" aria-label="Governance framework">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             <div className="lg:col-span-7">
               <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
                 Structure
@@ -143,7 +143,7 @@ export default function Page() {
               >
                 Governance Framework
               </h2>
-              
+
               <div className="text-sm sm:text-base text-[#64607a] leading-relaxed space-y-4">
                 <p>
                   The Board of Governors of KIA Lakeside Academy serves as the key governing body responsible for setting the strategic direction, ensuring financial compliance, and maintaining academic excellence.
@@ -187,7 +187,7 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-[#f9f9fb] border-t border-[#352679]/5" aria-label="Board members">
         <div className="container-site">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-[#352679] mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
               The Board of Governors
@@ -199,7 +199,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {boardMembers.map((member) => (
-              <div 
+              <div
                 key={member.role}
                 className="bg-white border border-[#352679]/5 rounded-3xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >

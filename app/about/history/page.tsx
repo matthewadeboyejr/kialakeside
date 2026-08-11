@@ -13,7 +13,7 @@ const timelineEvents = [
     year: "2008",
     title: "Commencement & Founding",
     description:
-      "Lakeside Academy Nursery and Primary was founded on the 28th of August, 2008 by Mrs. Tolulope Awobiyi. The school commenced operations on 15th September, 2008 with 16 pupils, comprising of 6 boys and 10 girls, housed at Ashaik Jarma street, Jabi, Abuja.",
+      "Lakeside Academy Nursery and Primary was founded on the 28th of August, 2008 by Mrs. Titilayo Adebiyi. The school commenced operations on 15th September, 2008 with 16 pupils, comprising of 6 boys and 10 girls, housed at Ashaik Jarma street, Jabi, Abuja.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -35,7 +35,7 @@ const timelineEvents = [
     year: "2017",
     title: "Relocation & Dedication",
     description:
-      "In August 2017, the school moved to its permanent site at Plot 1176, Babafemi Ogundipe Boulevard, Cadastral Zone B03, Wuye, Abuja. The school was dedicated and renamed KIA Lakeside Academy on Friday 1st December, 2017 in honour of Kunle Irene Awobiyi.",
+      "In August 2017, the school moved to its permanent site at Plot 1176, Babafemi Ogundipe Boulevard, Cadastral Zone B03, Wuye, Abuja. The school was dedicated and renamed KIA Lakeside Academy on Friday 1st December, 2017 in honour of Kunbi Irene Adebiyi (KIA).",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -115,7 +115,7 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Chronological history timeline">
         <div className="container-site">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-[#352679] mb-4" style={{ fontFamily: "var(--font-outfit)" }}>
               The Story of KIA Lakeside Academy
@@ -135,9 +135,8 @@ export default function Page() {
                 return (
                   <div
                     key={event.year}
-                    className={`relative flex flex-col md:flex-row items-start ${
-                      isEven ? "md:flex-row-reverse" : ""
-                    }`}
+                    className={`relative flex flex-col md:flex-row items-start ${isEven ? "md:flex-row-reverse" : ""
+                      }`}
                   >
                     {/* Timeline Node Icon */}
                     <div className="absolute left-4 md:left-1/2 w-8 h-8 rounded-full border-2 border-[#352679] bg-white text-[#352679] flex items-center justify-center -translate-x-1/2 z-10 shadow-sm">
@@ -148,13 +147,12 @@ export default function Page() {
 
                     {/* Timeline Card */}
                     <div className="w-full md:w-[calc(50%-2rem)] pl-10 md:pl-0">
-                      <div 
-                        className={`bg-white border border-[#352679]/10 rounded-2xl p-6 sm:p-8 hover:shadow-md hover:border-[#352679]/20 transition-all duration-300 ${
-                          isEven ? "md:text-right" : "md:text-left"
-                        }`}
+                      <div
+                        className={`bg-white border border-[#352679]/10 rounded-2xl p-6 sm:p-8 hover:shadow-md hover:border-[#352679]/20 transition-all duration-300 ${isEven ? "md:text-right" : "md:text-left"
+                          }`}
                       >
                         {/* Year tag */}
-                        <span 
+                        <span
                           className="inline-block px-3 py-1 rounded-full text-xs font-bold text-white mb-4 shadow-sm"
                           style={{
                             background: "linear-gradient(135deg, #FB8424 0%, #e06e10 100%)",
@@ -164,13 +162,13 @@ export default function Page() {
                           {event.year}
                         </span>
 
-                        <h3 
+                        <h3
                           className="text-lg sm:text-xl font-bold text-[#352679] mb-3"
                           style={{ fontFamily: "var(--font-outfit)" }}
                         >
                           {event.title}
                         </h3>
-                        
+
                         <p className="text-sm text-[#64607a] leading-relaxed">
                           {event.description}
                         </p>

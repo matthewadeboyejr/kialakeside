@@ -5,18 +5,18 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Messages | KIA Lakeside Academy",
   description:
-    "Read messages from Mrs. Tolulope Awobiyi (Proprietress), Mr. O. Awobiyi (Executive Director), and Mr. J. Smith (Principal) at KIA Lakeside Academy.",
+    "Read messages from Mrs. Titilayo Adebiyi (Proprietress), Mr. O. Awobiyi (Executive Director), and Mr. J. Smith (Principal) at KIA Lakeside Academy.",
 };
 
 const messages = [
   {
     role: "Proprietress' Address",
-    name: "Mrs. Tolulope Awobiyi",
+    name: "Mrs. Titilayo Adebiyi",
     title: "Founder & Proprietress",
-    text: "When we founded Lakeside Academy in 2008, our goal was simple yet profound: to create a nurturing space where children could discover their potential and achieve excellence. Today, renamed as KIA Lakeside Academy in honour of Kunle Irene Awobiyi, we continue to uphold these foundational values. We are committed to shaping future leaders who are not only academically competent but also characterized by strong moral standing and integrity. Thank you for partnering with us on this journey of shaping outstanding characters.",
+    text: "When we founded Lakeside Academy in 2008, our goal was simple yet profound: to create a nurturing space where children could discover their potential and achieve excellence. Today, renamed as KIA Lakeside Academy in honour of Kunbi Irene Adebiyi (KIA), we continue to uphold these foundational values. We are committed to shaping future leaders who are not only academically competent but also characterized by strong moral standing and integrity. Thank you for partnering with us on this journey of shaping outstanding characters.",
     initials: "TA",
     gradient: "from-[#352679] to-[#FB8424]",
-    imageAlt: "Mrs. Tolulope Awobiyi - Proprietress",
+    imageAlt: "Mrs. Titilayo Adebiyi - Proprietress",
   },
   {
     role: "Director's Message",
@@ -109,9 +109,8 @@ export default function Page() {
                 >
                   {/* Photo Column */}
                   <div
-                    className={`lg:col-span-4 ${
-                      isReverse ? "lg:order-2" : "lg:order-1"
-                    }`}
+                    className={`lg:col-span-4 ${isReverse ? "lg:order-2" : "lg:order-1"
+                      }`}
                   >
                     <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5] border border-gray-100 group">
                       {msg.imageUrl ? (
@@ -132,9 +131,8 @@ export default function Page() {
 
                   {/* Text Address Column */}
                   <div
-                    className={`lg:col-span-8 flex flex-col justify-center ${
-                      isReverse ? "lg:order-1" : "lg:order-2"
-                    }`}
+                    className={`lg:col-span-8 flex flex-col justify-center ${isReverse ? "lg:order-1" : "lg:order-2"
+                      }`}
                   >
                     <span
                       className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-3 block"
