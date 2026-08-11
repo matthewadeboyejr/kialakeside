@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Messages | KIA Lakeside Academy",
   description:
-    "Read messages from Mrs. Titilayo Adebiyi (Proprietress), Mr. O. Awobiyi (Executive Director), and Mr. J. Smith (Principal) at KIA Lakeside Academy.",
+    "Read messages from Mrs. Titilayo Adebiyi (Proprietress), Mr. O. Awobiyi (Executive Director), and Mr. Babatunde Lawal (Principal) at KIA Lakeside Academy.",
 };
 
 const messages = [
@@ -30,13 +30,13 @@ const messages = [
   },
   {
     role: "Principal's Welcome",
-    name: "Mr. J. Smith",
+    name: "Mr. Babatunde Lawal",
     title: "Principal / Head of School",
     text: "A very warm welcome to KIA Lakeside Academy. As Principal, I am immensely proud of our close-knit, supportive community and the quaint size of our classrooms. This enables us to give personalized attention to every student, fostering deep intellectual curiosity and character development. Our teachers are dedicated to inspiring critical thinking and academic curiosity, ensuring that every child thrives. We invite you to explore our programmes and campus.",
     imageUrl: "/new-principal-portrait.jpg",
     initials: "JS",
     gradient: "from-[#352679] to-[#25D366]",
-    imageAlt: "Mr. J. Smith - Principal",
+    imageAlt: "Mr. Babatunde Lawal - Principal",
   },
 ];
 

@@ -32,16 +32,100 @@ const boardMembers: LeaderProfile[] = [
     initials: "OA",
     gradient: "from-[#2e1f66] to-[#d66f1c]",
   },
+  {
+    name: "Professor Oladapo Afolabi (OON, CFR)",
+    role: "Chairman, Board of Directors",
+    bio: "Distinguished academician and administrator steering the board's strategic governance policies.",
+    initials: "OA",
+    gradient: "from-[#1e1b4b] to-[#4338ca]",
+  },
+  {
+    name: "Mrs. Efretei Arit",
+    role: "Member, Board of Directors",
+    bio: "Contributes governance expertise and policy review for school growth and operational progress.",
+    initials: "EA",
+    gradient: "from-[#0f172a] to-[#3b82f6]",
+  },
+  {
+    name: "Mr. Ibrahim Dikko",
+    role: "Member, Board of Directors",
+    bio: "Advises on corporate governance, organizational compliance, and strategic development.",
+    initials: "ID",
+    gradient: "from-[#022c22] to-[#10b981]",
+  },
+  {
+    name: "Mrs. Aisha Dikko",
+    role: "Member, Board of Directors",
+    bio: "Brings extensive legal and administrative expertise to board governance and compliance.",
+    initials: "AD",
+    gradient: "from-[#581c87] to-[#a855f7]",
+  },
+  {
+    name: "Mr. Tope Fashedemi",
+    role: "Member, Board of Directors",
+    bio: "Provides strategic insights into technology integration, infrastructure, and modern learning systems.",
+    initials: "TF",
+    gradient: "from-[#701a75] to-[#d946ef]",
+  },
+  {
+    name: "Dr. (Mrs.) Rosemary Umana",
+    role: "Member, Board of Directors",
+    bio: "Enriches the board with deep educational pedagogy, school quality assurance, and training insights.",
+    initials: "RU",
+    gradient: "from-[#831843] to-[#ec4899]",
+  },
+  {
+    name: "Mr. Anselem Anyanwu",
+    role: "Member, Board of Directors",
+    bio: "Supports institutional advancement, resource planning, and local community engagement initiatives.",
+    initials: "AA",
+    gradient: "from-[#14532d] to-[#22c55e]",
+  },
+  {
+    name: "Mr. Ibtitunde Balogun",
+    role: "Member, Board of Directors",
+    bio: "Guides fiscal planning, capital investments, and physical campus facility maintenance standards.",
+    initials: "IB",
+    gradient: "from-[#7c2d12] to-[#f97316]",
+  },
+  {
+    name: "Mrs. Adetutu Balogun",
+    role: "Member, Board of Directors",
+    bio: "Advises on student-centric care, community outreach programs, and student welfare governance.",
+    initials: "AB",
+    gradient: "from-[#0c4a6e] to-[#0ea5e9]",
+  },
+  {
+    name: "Mr. Babatunde Lawal",
+    role: "Member, Board of Directors",
+    bio: "Represents school administration and educational leadership on the board.",
+    initials: "BL",
+    gradient: "from-[#352679] to-[#25D366]",
+  },
+  {
+    name: "Mrs. Patience Omini",
+    role: "Member, Board of Directors",
+    bio: "Provides academic management input and school administration guidance to the board.",
+    initials: "PO",
+    gradient: "from-[#352679] to-[#0ea5e9]",
+  },
 ];
 
 const managementTeam: LeaderProfile[] = [
   {
-    name: "Mr. J. Smith",
+    name: "Mr. Babatunde Lawal",
     role: "Principal / Head of School",
     bio: "Directs day-to-day administration, academic standards, and the overall student development experience.",
     imageUrl: "/new-principal-portrait.jpg",
     initials: "JS",
     gradient: "from-[#352679] to-[#25D366]",
+  },
+  {
+    name: "Mrs. Patience Omini",
+    role: "Vice Principal",
+    bio: "Assists in coordinating school operations, overseeing curriculum implementation, and student academic success.",
+    initials: "PO",
+    gradient: "from-[#352679] to-[#0ea5e9]",
   },
   {
     name: "Mrs. Chioma Anyanwu",
@@ -56,6 +140,13 @@ const managementTeam: LeaderProfile[] = [
     bio: "Oversees financial audits, operational budgets, and physical infrastructure expansions.",
     initials: "BD",
     gradient: "from-[#1e293b] to-[#475569]",
+  },
+  {
+    name: "Mrs. Olabiyi Orekan",
+    role: "School's Accountant",
+    bio: "Manages student billing, tuition records, school accounts, and daily financial operations.",
+    initials: "OO",
+    gradient: "from-[#0f766e] to-[#14b8a6]",
   },
   {
     name: "Mrs. Olamide Adedeji",
@@ -136,7 +227,7 @@ export default function Page() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl">
             {boardMembers.map((member) => (
               <div
                 key={member.name}
