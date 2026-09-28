@@ -21,7 +21,7 @@ const admissionsSections = [
   },
   {
     title: "Apply to KIA Lakeside",
-    description: "Begin your child's enrolment journey today with our online application guidelines and document checklists.",
+    description: "Begin your child's enrollment journey today with our online application guidelines and document checklists.",
     href: "/admissions/apply",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -125,27 +125,33 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Overview details">
         <div className="container-site">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-4xl mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Welcome to KIA Lakeside
             </span>
-            <h2 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
               Shaping Future Leaders
             </h2>
             <div className="text-sm sm:text-base text-primary/80 leading-relaxed space-y-4">
               <p>
-                We are delighted that you are considering KIA Lakeside Academy for your child's education. At KIA Lakeside, we are dedicated to providing a world-class, nurturing environment where students thrive academically, socially, and emotionally.
+                Thank you for considering KIA Lakeside Academy as the foundation for your child’s educational journey. We recognise that choosing a school is an important decision, and we are committed to providing an exceptional educational experience in an environment where every child is encouraged to discover their strengths, pursue excellence, and develop with confidence.
               </p>
               <p>
-                Please explore our admissions links below to understand our processes, fee schedules, entrance exam guidelines, and scholarship criteria. We welcome you to contact our admissions desk to guide you through every step.
+                At KIA Lakeside Academy, we combine academic rigour with a strong focus on character, creativity, leadership, and personal development. Our nurturing and stimulating environment enable students to flourish intellectually, socially, emotionally, and physically, while developing the knowledge, skills, values, and global perspective required to succeed in a rapidly changing world.
+              </p>
+              <p>
+                We invite you to explore our admissions information to learn more about our application process, fee structure, entrance assessment requirements, and scholarship opportunities. Our Admissions Team is available to provide personalised guidance, answer your questions, and support your family throughout every stage of the admissions journey.
+              </p>
+              <p className="font-semibold text-primary">
+                We look forward to welcoming your family to KIA Lakeside Academy.
               </p>
             </div>
           </div>
 
-          {/* 5-Column Grid Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {/* 6-Card Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {admissionsSections.map((sec) => (
-              <Link 
+              <Link
                 key={sec.title}
                 href={sec.href}
                 className="bg-white border border-primary/10 rounded-2xl p-6 sm:p-8 hover:shadow-lg hover:border-primary/20 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
@@ -156,7 +162,7 @@ export default function Page() {
                     {sec.icon}
                   </div>
 
-                  <h3 
+                  <h3
                     className="text-base sm:text-lg font-bold text-primary mb-3"
                     style={{ fontFamily: "var(--font-outfit)" }}
                   >

@@ -7,7 +7,7 @@ import Button from "../../_components/ui/Button";
 export const metadata: Metadata = {
   title: "Apply to KIA Lakeside Academy | Admissions",
   description:
-    "Apply to KIA Lakeside Academy today. Discover required application documents, enrolment guidelines, and begin your child's journey towards a lifetime of excellence.",
+    "Apply to KIA Lakeside Academy today. Discover required application documents, enrollment guidelines, and begin your child's journey towards a lifetime of excellence.",
 };
 
 const requiredDocuments = [
@@ -121,7 +121,7 @@ export default function ApplyPage() {
                 Complete our online application form or visit our Admissions Office to begin the process.
               </p>
               <p>
-                Our admissions team will guide you through every stage, from enquiry to enrolment, ensuring that your experience is smooth, informative, and welcoming.
+                Our admissions team will guide you through every stage, from enquiry to enrollment, ensuring that your experience is smooth, informative, and welcoming.
               </p>
             </div>
           </div>

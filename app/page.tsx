@@ -87,7 +87,7 @@ export default function HomePage() {
         {/* Full-bleed Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero.jpg"
+            src="/home-hero.jpg"
             alt="KIA Lakeside Campus and Students"
             fill
             priority
@@ -175,15 +175,18 @@ export default function HomePage() {
                     className="text-2xl sm:text-3xl font-bold leading-snug mb-6 text-[#1a1633]"
                     style={{ fontFamily: "var(--font-outfit)" }}
                   >
-                    Welcome to <span className="text-[#352679]">KIA Lakeside Academy</span>, an exclusive <span className="text-[#FB8424]">reputable school for aged 2–16</span> situated in the quiet and serene suburb of Wuye in Abuja.
+                    Welcome to <span className="text-[#352679]">KIA Lakeside Academy</span>, a <span className="text-[#FB8424]">distinguished and reputable school</span> providing high-quality education for children aged 2–16, located in the peaceful and serene suburb of Wuye, Abuja.
                   </h3>
 
                   <div className="space-y-4 text-sm sm:text-base text-[#64607a] leading-relaxed">
                     <p>
-                      The school campus is a purpose built educational facility creating a comfortable, colourful and conducive environment for teaching and learning.
+                      Our school campus is a purpose-built educational facility thoughtfully designed to provide a safe, vibrant, welcoming, and stimulating environment that supports effective teaching, learning, and personal development.
                     </p>
                     <p>
-                      We aim to provide a place that our pupils can thrive outside of school. Our unique learning experience and close knit community provides opportunities for growth and development where children can go out into the world to create value and make a difference.
+                      At KIA Lakeside Academy, we are committed to creating an enriching educational experience where every child is encouraged to thrive, both within and beyond the classroom. Our distinctive approach to learning, together with our strong sense of community, provides pupils with meaningful opportunities to develop their academic abilities, character, confidence, creativity, and leadership potential.
+                    </p>
+                    <p>
+                      We seek to equip our pupils with the knowledge, skills, values, and mindset required to engage positively with the world around them, contribute meaningfully to society, create value, and make a lasting difference.
                     </p>
                   </div>
                 </div>
@@ -593,7 +596,7 @@ export default function HomePage() {
             {/* Card 1: STEM & Science Lab (col-span-2, row-span-1) */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg group col-span-1 sm:col-span-2 row-span-1 h-64 sm:h-auto">
               <Image
-                src="/science_lab_students.png"
+                src="/science_lab_students.jpg"
                 alt="Science Lab Experiment"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -674,8 +677,8 @@ export default function HomePage() {
             {/* Card 4: Campus Life (col-span-2, row-span-1) */}
             <div className="relative rounded-3xl overflow-hidden shadow-lg group col-span-1 sm:col-span-2 row-span-1 h-64 sm:h-auto">
               <Image
-                src="/students_hallway.png"
-                alt="Students in Hallway"
+                src="/student-life-heroimg.jpg"
+                alt="Students Campus Life"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-w-7xl) 50vw, 100vw"

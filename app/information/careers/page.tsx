@@ -117,7 +117,7 @@ export default function CareersPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/conducive-learning-environment.jpg"
+                    src="/careers-hero.jpg"
                     alt="KIA Lakeside Academy Faculty & Careers"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

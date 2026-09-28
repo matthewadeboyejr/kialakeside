@@ -20,7 +20,7 @@ const schoolPolicies: PolicyItem[] = [
     id: "admissions",
     title: "Admissions Policy",
     category: "Admissions & Entry",
-    shortDescription: "Guidelines and criteria for prospective student enrolment, placement testing, age requirements, and equal opportunity standards.",
+    shortDescription: "Guidelines and criteria for prospective student enrollment, placement testing, age requirements, and equal opportunity standards.",
     fullContent: [
       "KIA Lakeside Academy maintains a non-discriminatory admissions policy welcoming students of all backgrounds who demonstrate academic readiness and alignment with our school values.",
       "Applicants undergo age-appropriate screening assessments (Early Years observational play, Primary literacy/numeracy test, and Secondary subject placement exams in Mathematics and English).",
@@ -282,7 +282,7 @@ export default function SchoolPoliciesPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/conducive-learning-environment.jpg"
+                    src="/school-policies-hero.jpg"
                     alt="KIA Lakeside Academy Governance Handbook"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

@@ -124,7 +124,7 @@ export default function EntranceExamPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/science_lab_students.png"
+                    src="/entrance-exam.jpg"
                     alt="KIA Lakeside Students Learning"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -245,7 +245,7 @@ export default function EntranceExamPage() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Button href="/admissions/process" variant="secondary" size="lg">
-              Explore Enrolment Process
+              Explore enrollment Process
             </Button>
             <Button href="/contact" variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">
               Schedule Assessment Session

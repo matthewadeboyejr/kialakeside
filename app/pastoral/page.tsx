@@ -105,19 +105,28 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Pastoral Philosophy">
         <div className="container-site">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-4xl mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Holistic Support
             </span>
-            <h2 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
               Nurturing Mind, Character, and Community
             </h2>
             <div className="text-sm sm:text-base text-primary/80 leading-relaxed space-y-4">
               <p>
-                At KIA Lakeside Academy, education is more than academic performance. We are dedicated to providing a safe, positive, and structured environment where students grow into self-disciplined, moral, and emotionally mature leaders. Our pastoral system centers on individual care, mental wellbeing, academic mentorship, and active social-emotional guidance.
+                At KIA Lakeside Academy, we believe that a truly exceptional education extends beyond academic achievement. We are committed to creating a safe, inclusive, and supportive environment where every student is encouraged to develop confidence, resilience, self-discipline, integrity, and a strong sense of responsibility.
               </p>
               <p>
-                Explore our pastoral areas below to learn about the structured support networks, counseling services, student councils, and behavior-motivation models that enrich student life on our Abuja campus daily.
+                Our comprehensive pastoral care programme places the individual student at the heart of our approach. Through personalised support, academic mentoring, wellbeing initiatives, counselling, and social-emotional guidance, we provide students with the care and encouragement they need to navigate each stage of their educational journey with confidence.
+              </p>
+              <p>
+                We place equal importance on character development and community engagement, encouraging our students to demonstrate respect, empathy, accountability, and leadership in their interactions with others. Through a structured and nurturing framework, students are empowered to make positive choices, build meaningful relationships, and develop a strong sense of belonging within the school community.
+              </p>
+              <p>
+                Explore our pastoral care and student development programmes below to discover the range of support systems and opportunities available at KIA Lakeside Academy, including counselling and wellbeing services, student leadership and councils, mentoring programmes, and positive behaviour and recognition initiatives.
+              </p>
+              <p className="font-semibold text-primary">
+                Together, these programmes create a school experience in which every student is known, supported, valued, and inspired to become the best version of themselves.
               </p>
             </div>
           </div>

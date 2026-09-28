@@ -100,7 +100,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Academic library / study setting */}
         <Image
-          src="/school-images/libraries.jpg"
+          src="/new-liberies.jpg"
           alt="KIA Lakeside Academy study resources"
           fill
           priority
@@ -145,19 +145,25 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Academic philosophy">
         <div className="container-site">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-4xl mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Our Approach
             </span>
-            <h2 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
               Empowering Students for Global Achievement
             </h2>
             <div className="text-sm sm:text-base text-primary/80 leading-relaxed space-y-4">
               <p>
-                At KIA Lakeside Academy, we provide a broad, balanced, and stimulating curriculum designed to unlock the unique potential of every student. Our blended academic model combines local heritage and values with the global rigor of the British curriculum, equipping students with critical thinking, programming/ICT skills, and moral leadership to succeed in the 21st-century workspace.
+                At KIA Lakeside Academy, we are committed to providing a broad, balanced, and intellectually enriching curriculum designed to recognise and develop the unique potential of every learner. Our academic approach combines the richness of local heritage, values, and cultural identity with the academic rigour and internationally recognised standards of the British curriculum.
               </p>
               <p>
-                Explore our specific academic stages, key dates, and booklets below to understand the unique curricular pathways available to students from Early Years through Primary to Secondary levels.
+                Through this integrated approach, we cultivate intellectual curiosity, critical thinking, creativity, digital literacy, programming and ICT competencies, effective communication, and strong moral and ethical values. Our aim is to equip students not only to excel academically, but also to become confident, adaptable, principled, and forward-thinking individuals prepared to contribute meaningfully in an increasingly interconnected world.
+              </p>
+              <p>
+                Our curriculum is thoughtfully structured to support each stage of a child’s educational development—from the Early Years through Primary and Secondary education. Each phase provides age-appropriate opportunities for academic progression, personal development, leadership, creativity, and independent learning.
+              </p>
+              <p>
+                Explore our academic stages, curriculum guides, key dates, and school publications below to discover the distinctive learning pathways available to students throughout their educational journey at KIA Lakeside Academy.
               </p>
             </div>
           </div>

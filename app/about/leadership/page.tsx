@@ -166,7 +166,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Classroom context */}
         <Image
-          src="/new-conducive-learning-environment.jpg"
+          src="/leadership-team.jpg"
           alt="Educational leadership and teaching"
           fill
           priority

@@ -17,11 +17,11 @@ export default function Page() {
       <section className="relative w-full h-[45vh] min-h-[350px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Energetic active sports theme matching the 1st image */}
         <Image
-          src="/new-sporting-facilities.jpg"
+          src="/mission-vision-hero.jpg"
           alt="Students running on sports track"
           fill
           priority
-          className="object-cover"
+          className="object-cover "
           sizes="100vw"
         />
         {/* Transparent gradient overlay (so the bright field is visible, not heavily darkened) */}
@@ -46,7 +46,7 @@ export default function Page() {
       <section className="py-20 bg-white" aria-label="Core statement details">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
+
             {/* Left: Simple Owl Line-Art Icon (directly on white bg, no background box) */}
             <div className="lg:col-span-2 flex justify-start pt-1">
               <svg className="w-16 h-16 text-[#352679]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.2}>
@@ -69,7 +69,7 @@ export default function Page() {
 
             {/* Middle: Vision and Mission text blocks */}
             <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-              
+
               {/* Vision Card */}
               <div>
                 <h2
@@ -121,7 +121,7 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 text-white" style={{ background: "#352679" }} aria-label="Disposition philosophy">
         <div className="container-site">
-          
+
           {/* Guiding Principles Header (Simple white text) */}
           <div className="mb-16">
             <h2
@@ -136,7 +136,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
+
             {/* Column 1: Core Values */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-[#FB8424]" style={{ fontFamily: "var(--font-outfit)" }}>
@@ -181,7 +181,7 @@ export default function Page() {
               <h3 className="text-xl font-bold mb-6 text-[#FB8424]" style={{ fontFamily: "var(--font-outfit)" }}>
                 Conduct Code (Behaviour)
               </h3>
-              
+
               <p className="text-xs text-white/70 mb-5 leading-relaxed">
                 At KIA Lakeside Academy we build a child to equip them for an excellent future. This is why we have gone the extra mile to provide a friendly environment with world class facilities and internationally trained staff.
               </p>
@@ -218,7 +218,7 @@ export default function Page() {
                   </div>
                 </li>
               </ul>
-              
+
               <p className="text-[11px] text-[#FB8424] italic font-semibold mt-6 leading-relaxed">
                 &ldquo;Getting it right will result in PRAISE, continuously failing to get it right will result in PENALTIES.&rdquo;
               </p>
@@ -282,7 +282,7 @@ export default function Page() {
       <section className="py-20 bg-white" aria-label="Visit us">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             {/* Left Column: Text Content */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               {/* Campus Building Line-Art Icon (no colored box) */}
@@ -337,7 +337,7 @@ export default function Page() {
       <section className="py-20 bg-[#f9f9fb]" aria-label="Alumni success">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             {/* Left Column: Graduation Image (Clean rounded corners, no extra shadow box) */}
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-gray-100 group">
@@ -369,7 +369,7 @@ export default function Page() {
               </h2>
 
               <p className="text-sm sm:text-base text-[#64607a] leading-relaxed mb-6">
-                As the years go by an increasing number of students graduate from KIA Lakeside Academy with excellent qualifications enabling them to continue their education in schools and universities in the UK, USA, Canada, and Nigeria. Our graduates proceed to prestigious institutions globally, carrying our core values of excellence, integrity, and achievement.
+                As the years go by, an increasing number of students graduate from KIA Lakeside Academy with excellent qualifications enabling them to continue their education in schools and universities in the UK, USA, Canada, and Nigeria. Our graduates proceed to prestigious institutions globally, carrying our core values of excellence, integrity, and achievement.
               </p>
 
               <div>

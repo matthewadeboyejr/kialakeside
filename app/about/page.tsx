@@ -63,7 +63,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/school-building.jpg"
+                    src="/school-images/school-buildig.jpg"
                     alt="KIA Lakeside Academy Campus Building"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   title="Nurturing Potential & Character"
                   subtitle="A vibrant learning community committed to academic excellence, innovation, and holistic child development."
                 />
-                
+
                 {/* Secondary Showcase Image Card */}
                 <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-100">
                   <div className="relative aspect-[4/3] w-full">

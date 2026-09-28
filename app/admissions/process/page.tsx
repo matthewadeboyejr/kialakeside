@@ -7,7 +7,7 @@ import Button from "../../_components/ui/Button";
 export const metadata: Metadata = {
   title: "Admission Process | KIA Lakeside Academy",
   description:
-    "Discover our 7-step admission process at KIA Lakeside Academy: Make an Enquiry, Visit Our Campus, Complete Application Form, Entrance Assessment, Interview, Offer, and Enrolment.",
+    "Discover our 7-step admission process at KIA Lakeside Academy: Make an Enquiry, Visit Our Campus, Complete Application Form, Entrance Assessment, Interview, Offer, and Enrollment.",
 };
 
 const processSteps = [
@@ -93,7 +93,7 @@ const processSteps = [
   {
     step: "Step 7",
     num: "07",
-    title: "Enrolment",
+    title: "Enrollment",
     description:
       "Admission is confirmed upon acceptance of the offer and payment of the applicable fees.",
     icon: (
@@ -133,7 +133,7 @@ export default function AdmissionProcessPage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs md:text-sm text-amber-300 font-semibold uppercase tracking-wider">
                 <span className="w-2 h-2 rounded-full bg-[#FB8424] animate-ping" />
-                Enrolment Roadmap
+                Enrollment Roadmap
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display">
@@ -141,7 +141,7 @@ export default function AdmissionProcessPage() {
               </h1>
 
               <p className="text-lg md:text-xl text-purple-100/90 leading-relaxed max-w-2xl font-light">
-                We are delighted that you are considering KIA Lakeside Academy for your child&apos;s education. Our admission process is designed to be straightforward, transparent, and supportive, ensuring that every family enjoys a smooth enrolment experience.
+                We are delighted that you are considering KIA Lakeside Academy for your child&apos;s education. Our admission process is designed to be straightforward, transparent, and supportive, ensuring that every family enjoys a smooth enrollment experience.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-4">
@@ -158,8 +158,8 @@ export default function AdmissionProcessPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/learning-environment.jpg"
-                    alt="KIA Lakeside Academy Campus Life"
+                    src="/admission-process.jpg"
+                    alt="KIA Lakeside Academy Admission Process"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -182,14 +182,14 @@ export default function AdmissionProcessPage() {
       </section>
 
       {/* ----------------------------------------------------
-          2. STEP-BY-STEP ENROLMENT TIMELINE (7 STEPS)
+          2. STEP-BY-STEP Enrollment TIMELINE (7 STEPS)
          ---------------------------------------------------- */}
       <section className="section-pad bg-white">
         <div className="container-site">
           <SectionHeading
             eyebrow="Step-by-Step Guide"
-            title="Seven Steps to Enrolment"
-            subtitle="Follow our clear seven-step admissions roadmap from initial enquiry to final enrolment."
+            title="Seven Steps to Enrollment"
+            subtitle="Follow our clear seven-step admissions roadmap from initial enquiry to final enrollment."
             center
           />
 

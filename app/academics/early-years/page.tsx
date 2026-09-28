@@ -103,7 +103,7 @@ export default function EarlyYearsPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/early-years.jpg"
+                    src="/early-years-hero.jpg"
                     alt="Early Years Child playing at KIA Lakeside Academy"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

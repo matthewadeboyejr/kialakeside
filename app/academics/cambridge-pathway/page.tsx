@@ -73,7 +73,7 @@ export default function CambridgePathwayPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/science-lab.jpg"
+                    src="/cambridge-hero.jpg"
                     alt="Cambridge Pathway Science Lab at KIA Lakeside Academy"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

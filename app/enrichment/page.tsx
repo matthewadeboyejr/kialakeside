@@ -95,19 +95,25 @@ export default function Page() {
       ═══════════════════════════════════════════ */}
       <section className="py-20 bg-white" aria-label="Enrichment Philosophy">
         <div className="container-site">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-4xl mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#FB8424] mb-2 block" style={{ fontFamily: "var(--font-outfit)" }}>
               Balanced Growth
             </span>
-            <h2 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6" style={{ fontFamily: "var(--font-outfit)" }}>
               Exploring Potentials Beyond the Classroom
             </h2>
             <div className="text-sm sm:text-base text-primary/80 leading-relaxed space-y-4">
               <p>
-                At KIA Lakeside Academy, learning doesn't end with textbook topics. Our Enrichment Programs inspire students to cultivate personal interests, physical health, teamwork, and creative expression through standard athletics tracks, music coaching, visual crafts, and our professional Football Academy.
+                At KIA Lakeside Academy, we believe that a well-rounded education extends beyond the academic curriculum. Our comprehensive enrichment and co-curricular programmes provide students with opportunities to discover their interests, develop new talents, build physical wellbeing, and cultivate the interpersonal skills required to thrive in school and beyond.
               </p>
               <p>
-                Explore our enrichment areas below to learn about sports activities, extramural clubs, and specialized football programs that help build character and physical coordination.
+                Through a diverse range of sporting activities, performing and creative arts, music development, clubs, societies, and specialist programmes, students are encouraged to explore their individual strengths while developing discipline, teamwork, creativity, confidence, resilience, and leadership.
+              </p>
+              <p>
+                Our sporting provision includes structured athletics and physical development programmes, while our music and creative arts opportunities enable students to express themselves, develop their talents, and engage meaningfully with the arts. Our specialist Football Academy further provides focused training and development for students with a passion and aptitude for the sport.
+              </p>
+              <p>
+                Explore our enrichment opportunities below to discover our sports programmes, extracurricular clubs, creative and performing arts activities, and specialist football development pathways—all designed to complement academic learning and support the holistic development of every student.
               </p>
             </div>
           </div>

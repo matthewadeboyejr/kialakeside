@@ -138,7 +138,7 @@ export default function FootballAcademyPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/new-football-pitch.jpg"
+                    src="/football-hero.jpg"
                     alt="KIA Lakeside Football Academy Training Pitch"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

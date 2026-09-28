@@ -112,7 +112,7 @@ export default function SecondaryPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/science_lab_students.png"
+                    src="/science_lab_students.jpg"
                     alt="Secondary School Students in Science Lab"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

@@ -17,7 +17,7 @@ export default function Page() {
       <section className="relative w-full h-[40vh] min-h-[320px] flex items-end pb-12 overflow-hidden">
         {/* Background Image: Assembly/learning context */}
         <Image
-          src="/new-well-equipped-auditorium.jpg"
+          src="/school-song-hero.jpg"
           alt="School students in an assembly hall"
           fill
           priority
