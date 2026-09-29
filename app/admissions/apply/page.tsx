@@ -73,7 +73,7 @@ export default function ApplyPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/school-images/children-playing.jpg"
+                    src="/apply-hero.jpg"
                     alt="KIA Lakeside Academy Students"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
