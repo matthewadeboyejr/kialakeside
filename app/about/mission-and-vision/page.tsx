@@ -21,7 +21,7 @@ export default function Page() {
           alt="Students running on sports track"
           fill
           priority
-          className="object-cover "
+          className="object-cover"
           sizes="100vw"
         />
         {/* Transparent gradient overlay (so the bright field is visible, not heavily darkened) */}
